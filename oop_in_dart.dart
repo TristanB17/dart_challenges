@@ -16,11 +16,12 @@ class SuperHero {
   SuperHero(this.name, [this.butler]);
   //constuctor is name of class being generated
   hasButler(){
-    if (butler != null){
-      return " ${butler}";
-    } else {
-      return '';
-    }
+    // if (butler != null){
+    //   return " ${butler}";
+    // } else {
+    //   return '';
+    // }
+    return butler != null ? ' ${butler}' : '';
   }
   superPower(){
   print("Oh${this.hasButler()}, I never would have guessed that Batman was actually the ${age} year-old ${name}");    
