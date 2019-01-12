@@ -1,12 +1,29 @@
 void main(){
-  var batman = new SuperHero();
-  print("Oh no, I never would have guessed that Batman was actually ${batman.name}, ${batman.superPower()}");
+  var batman = new SuperHero('Bruce Wayne', 'Alfred');
+  batman.age = 34;
+  batman.superPower();
+
+  var spiderman = new SuperHero('Peter Parker');
+  spiderman.age = 23;
+  spiderman.superPower();
 }
 
 class SuperHero {
-  String name = 'Bruce Wayne';
+  String name;
+  String butler;
+  int age;
+  
+  SuperHero(this.name, [this.butler]);
+  //constuctor is name of class being generated
+  hasButler(){
+    if (butler != null){
+      return " ${butler}";
+    } else {
+      return '';
+    }
+  }
   superPower(){
-    print("the world's greatest detective!");
+  print("Oh${this.hasButler()}, I never would have guessed that Batman was actually the ${age} year-old ${name}");    
     // return "the world's greatest detective!";
   }
 }
