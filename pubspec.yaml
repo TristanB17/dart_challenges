@@ -1,0 +1,6 @@
+name: dart_challenges
+version: 1.0.0
+description: >-
+  Setting up pubspec to import test packages.
+dependencies:
+  test: ^1.5.1+1
